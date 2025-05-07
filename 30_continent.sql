@@ -1,0 +1,23 @@
+-- ELIMINACION DE TODAS LAS TABLAS.
+DROP TABLE country;
+DROP TABLE city;
+DROP TABLE countrylanguage;
+
+
+-- CREANDO DESDE CERO
+
+CREATE TABLE IF NOT EXISTS
+
+
+
+SELECT DISTINCT continent FROM country ORDER BY continent ASC;
+
+CREATE TABLE continent ("code" SERIAL NOT NULL, "name" TEXT NOT NULL,
+PRIMARY KEY (code))
+
+-- INSERTAR EN LA TABLA CONTINENTE REALIZAR UN VOLCADO
+
+INSERT INTO continent (name)
+SELECT DISTINCT continent FROM country ORDER BY continent ASC;
+
+SELECT * FROM continent;
